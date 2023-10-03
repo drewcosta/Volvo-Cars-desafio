@@ -8,10 +8,7 @@ const fetcher = async () => {
 };
 
 export function useCars(){
-  const {data, isLoading} = useQuery({
-    queryFn: fetcher,
-    queryKey:['cars'],
-  })
+  const { data, isLoading } = useQuery<Car[]>('cars', fetcher)
 
   return{
     data,
