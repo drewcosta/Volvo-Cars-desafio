@@ -3,8 +3,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-width: 350px;
+  min-width: 330px;
   cursor: pointer;
+}
+.cardWrapper > div {
+  padding: 5px 11px;
 }
 
 .cardWrapper:hover img{

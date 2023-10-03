@@ -5,16 +5,31 @@
   align-items:center;
 
   max-width: 100%;
-  width: 100%;
+  width: 70%;
   height: 100vh;
+  margin: auto;
 }
 .cardsWrapper{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items:center;
 
-  max-width: 75%;
+  max-width: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+.carouselControls{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.carouselControls span:first-child{
+  transform: scaleX(-1);
+}
+.carouselControls img{
+  cursor: pointer;
 }

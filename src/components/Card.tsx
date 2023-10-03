@@ -31,13 +31,13 @@ export const CardCar = ({ car }: CardPops) => {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "row",
-          gap: 10,
+          gap: 15,
         }}>
-          <Link href="https://www.volvocars.com/" arrow="right">
-            SHOP
+          <Link href="" arrow="right">
+            Conheça
           </Link>
-          <Link href="https://www.volvocars.com/" arrow="right">
-            LEARN
+          <Link href="" arrow="right">
+            Comprar
           </Link>
         </Flex>
       </CardContent>
