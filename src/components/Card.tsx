@@ -25,7 +25,7 @@ export const CardCar = ({ car }: CardPops) => {
           <Text variant={"bates"} subStyle="inline-link">{car.modelType}</Text>
         </Flex>
         <Spacer />
-        <Image src={car.imageUrl} height={250} width={350} />
+        <Image src={car.imageUrl} alt={car.modelName} height={250} width={350} />
         <Spacer />
         <Flex extend={{
           justifyContent: "center",
