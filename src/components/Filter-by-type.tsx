@@ -2,8 +2,6 @@ import React from "react";
 import { FilterTypes } from "../types/car-filter-types";
 import { useFilter } from "../hooks/useFilter";
 import { TabNav, TabNavItem } from "vcc-ui";
-import { useCars } from "../hooks/useCars";
-import { getCategoryByType } from "../utils/filters";
 
 export const FilterByType = () => {
   const { type, setType } = useFilter();
