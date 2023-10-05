@@ -1,0 +1,24 @@
+.cardsWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:center;
+
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselControls{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.carouselControls span:first-child{
+  transform: scaleX(-1);
+}
+.carouselControls img{
+  cursor: pointer;
+}
