@@ -24,21 +24,11 @@ export const HelloWorld: React.FC = () => {
   return (
     <>
       <div className={styles.homeWrapper}>
-        <Text variant={"cook"}>Todos os modelos Recharge</Text>
-        <Spacer />
+        <Text variant={"cook"} extend={{ textAlign: "center" }}>Todos os modelos Recharge</Text>
         <FilterByType />
-        <Spacer />
-        <Flex
-          extend={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Carousel>
-            <CardList cars={filteredCars} />
-          </Carousel>
-        </Flex>
+        <Carousel>
+          <CardList cars={filteredCars} />
+        </Carousel>
       </div>
     </>
   );

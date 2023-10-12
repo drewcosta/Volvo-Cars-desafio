@@ -5,7 +5,6 @@ import ArrowRight from "../../docs/chevron-circled.svg";
 import ArrowLeft from "../../docs/chevron-circled copy.svg";
 import styles from "../../public/css/components/Carousel.module.css";
 import { useCars } from "../hooks/useCars";
-import { CardList } from "./Card-list";
 
 interface CarouselProps {
   children: ReactNode;
@@ -45,6 +44,7 @@ export const Carousel = ({ children }: CarouselProps) => {
     }
     setSelected(index);
   };
+
   return (
     <>
       <div className={styles.cardsWrapper} id="card-list" ref={carouselRef}>

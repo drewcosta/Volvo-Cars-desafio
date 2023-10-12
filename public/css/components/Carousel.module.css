@@ -31,7 +31,8 @@
   gap: 4px;
 }
 
-.btn {
+.btn, .btnSelected {
+  display: none;
   border: none;
   padding: 0;
   width: 12px;
@@ -41,10 +42,15 @@
 }
 
 .btnSelected {
-  border: none;
-  padding: 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
   background-color: #3c3c3c;
+}
+
+@media (max-width: 769px) {
+  .btn, .btnSelected {
+    display: block;
+  }
+
+  .carouselControls{
+    display: none;
+  }
 }

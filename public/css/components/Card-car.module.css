@@ -1,4 +1,4 @@
-.cardWrapper{
+.cardWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -6,11 +6,12 @@
   min-width: 330px;
   cursor: pointer;
 }
-.cardWrapper > div {
+
+.cardWrapper>div {
   padding: 5px 11px;
 }
 
-.cardWrapper:hover img{
+.cardWrapper:hover img {
   transition: transform 0.3s ease;
   transform: scale(1.1);
 }

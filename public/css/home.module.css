@@ -10,3 +10,9 @@
   height: 100vh;
   margin: auto;
 }
+
+@media (max-width: 769px) {
+  .homeWrapper {
+    width: 100%;
+  }
+}
