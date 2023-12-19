@@ -1,0 +1,13 @@
+.tab{
+  width: inherit;
+}
+.tab nav{
+  background-color: transparent!important;
+  border: none!important;
+}
+
+@media (max-width: 1441px) {
+  .tab{
+    /* display: none; */
+  }
+}
