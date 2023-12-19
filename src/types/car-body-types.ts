@@ -1,4 +1,4 @@
-export enum FilterTypes{
+export enum CarBodyTypes{
   'ALL',
   'SUV',
   'SEDAN',

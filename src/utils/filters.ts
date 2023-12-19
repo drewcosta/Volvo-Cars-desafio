@@ -1,8 +1,8 @@
-import { FilterTypes } from "../types/car-filter-types";
+import { CarBodyTypes } from "../types/car-body-types";
 
-export function getCategoryByType(type: FilterTypes){
-  if(type === FilterTypes.SUV) return 'suv';
-  if(type === FilterTypes.STATE) return 'estate';
-  if(type === FilterTypes.SEDAN) return 'sedan';
+export function getCarBodyType(bodyType: CarBodyTypes){
+  if(bodyType === CarBodyTypes.SUV) return 'suv';
+  if(bodyType === CarBodyTypes.STATE) return 'estate';
+  if(bodyType === CarBodyTypes.SEDAN) return 'sedan';
   return '';
 }
