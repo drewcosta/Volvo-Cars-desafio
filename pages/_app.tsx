@@ -1,6 +1,6 @@
-import { HelloWorld } from "../src/components/HelloWorld";
-import "../public/css/styles.css";
 import React from "react";
+import "../public/css/styles.css";
+import { Home } from "../src/components/Home";
 import { StyleProvider, ThemePicker } from "vcc-ui";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { FilterContextProvider } from "../src/contexts/FilterContext";
@@ -14,7 +14,7 @@ function HomePage() {
         <FilterContextProvider>
           <StyleProvider>
             <ThemePicker variant="light">
-              <HelloWorld />
+              <Home />
             </ThemePicker>
           </StyleProvider>
         </FilterContextProvider>

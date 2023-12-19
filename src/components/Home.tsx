@@ -1,34 +1,39 @@
 import React from "react";
-import { Spacer, Text, Flex } from "vcc-ui";
-import { useCars } from "../hooks/useCars";
+import { Text } from "vcc-ui";
 import styles from "../../public/css/home.module.css";
 
-import { FilterByType } from "./Filter-by-type";
-import { getCategoryByType } from "../utils/filters";
+import { getCategoryByBodyType } from "../utils/filters";
+import { useCars } from "../hooks/useCars";
 import { useFilter } from "../hooks/useFilter";
-import { CardList } from "./Card-list";
-import { Carousel } from "./Carousel";
 
-export const HelloWorld: React.FC = () => {
+import { CardFilterBodyType } from "./Card"
+import { CardList } from "./Card";
+import { CardCarousel } from "./Card";
+
+export const Home: React.FC = () => {
   const { type } = useFilter();
   const { data } = useCars();
 
-  const filterCarsByType = (type: string) => {
+  const filterCarsByBodyType = (type: string) => {
     if (!data) return [];
     if (type === "") return data;
     return data.filter((car) => car.bodyType === type);
   };
 
-  const filteredCars = filterCarsByType(getCategoryByType(type));
+  const filteredCars = filterCarsByBodyType(getCategoryByBodyType(type));
 
   return (
     <>
       <div className={styles.homeWrapper}>
+
         <Text variant={"cook"} extend={{ textAlign: "center" }}>Todos os modelos Recharge</Text>
-        <FilterByType />
-        <Carousel>
+
+        <CardFilterBodyType />
+
+        <CardCarousel>
           <CardList cars={filteredCars} />
-        </Carousel>
+        </CardCarousel>
+
       </div>
     </>
   );

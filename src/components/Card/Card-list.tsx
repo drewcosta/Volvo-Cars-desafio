@@ -1,6 +1,6 @@
 import React from "react";
-import { Car } from "../types/car";
 import { CardCar } from "./Card-car";
+import { Car } from "../../types/car";
 
 interface CarListProps{
   cars: Car[];

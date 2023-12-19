@@ -1,15 +1,17 @@
 import React from "react";
-import { FilterTypes } from "../types/car-filter-types";
-import { useFilter } from "../hooks/useFilter";
 import { TabNav, TabNavItem } from "vcc-ui";
-import { useCars } from "../hooks/useCars";
 import styles from '../../public/css/components/Filter-by-type.module.css'
 
-export const FilterByType = () => {
+import { useCars } from "../../hooks/useCars";
+import { useFilter } from "../../hooks/useFilter";
+
+import { CarBodyTypes } from "../../types/car-body-types";
+
+export const CardFilterBodyType = () => {
   const { type, setType } = useFilter();
   const { data } = useCars();
 
-  const getCountForType = (type: string) => {
+  const getCountForBodyType = (type: string) => {
     return data?.filter((car) => car.bodyType === type).length;
   }
 
@@ -17,36 +19,36 @@ export const FilterByType = () => {
     <div className={styles.tab}>
       <TabNav enableLineTransition={false}>
         <TabNavItem
-          isActive={type === FilterTypes.ALL}
+          isActive={type === CarBodyTypes.ALL}
           onClick={() => {
-            setType(FilterTypes.ALL);
+            setType(CarBodyTypes.ALL);
           }}
         >
           Todos {"(" + data?.length + ")"}
         </TabNavItem>
         <TabNavItem
-          isActive={type === FilterTypes.SUV}
+          isActive={type === CarBodyTypes.SUV}
           onClick={() => {
-            setType(FilterTypes.SUV);
+            setType(CarBodyTypes.SUV);
           }}
         >
-          SUV {"(" + getCountForType("suv") + ")"}
+          SUV {"(" + getCountForBodyType("suv") + ")"}
         </TabNavItem>
         <TabNavItem
-          isActive={type === FilterTypes.SEDAN}
+          isActive={type === CarBodyTypes.SEDAN}
           onClick={() => {
-            setType(FilterTypes.SEDAN);
+            setType(CarBodyTypes.SEDAN);
           }}
         >
-          Sedan {"(" + getCountForType("sedan") + ")"}
+          Sedan {"(" + getCountForBodyType("sedan") + ")"}
         </TabNavItem>
         <TabNavItem
-          isActive={type === FilterTypes.STATE}
+          isActive={type === CarBodyTypes.STATE}
           onClick={() => {
-            setType(FilterTypes.STATE);
+            setType(CarBodyTypes.STATE);
           }}
         >
-          Estate {"(" + getCountForType("estate") + ")"}
+          Estate {"(" + getCountForBodyType("estate") + ")"}
         </TabNavItem>
       </TabNav>
     </div>
