@@ -2,8 +2,8 @@ import { ReactNode, createContext, useState } from "react";
 import { CarBodyTypes } from "../types/car-body-types";
 
 export const FilterContext = createContext({
-  type: CarBodyTypes.ALL,
-  setType: (value: CarBodyTypes) => {},
+  bodyType: CarBodyTypes.ALL,
+  setBodyType: (value: CarBodyTypes) => {},
 })
 
 interface ProviderProps{
@@ -11,13 +11,13 @@ interface ProviderProps{
 }
 
 export const FilterContextProvider = ({ children }: ProviderProps) =>{
-  const [type, setType] = useState(CarBodyTypes.ALL);
+  const [bodyType, setBodyType] = useState(CarBodyTypes.ALL);
 
   return(
     <FilterContext.Provider
       value={{
-        type,
-        setType,
+        bodyType,
+        setBodyType,
       }}
     >
       {children}

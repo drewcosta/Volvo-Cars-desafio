@@ -2,9 +2,9 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
-import ArrowRight from "../../docs/chevron-circled.svg";
-import ArrowLeft from "../../docs/chevron-circled copy.svg";
-import styles from "../../public/css/components/Carousel.module.css";
+import ArrowRight from "../../../docs/chevron-circled.svg";
+import ArrowLeft from "../../../docs/chevron-circled copy.svg";
+import styles from "../../../public/css/components/Card-carousel.module.css";
 
 import { useCars } from "../../hooks/useCars";
 
