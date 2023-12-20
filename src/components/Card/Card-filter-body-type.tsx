@@ -8,8 +8,8 @@ import { useFilter } from "../../hooks/useFilter";
 import { CarBodyTypes } from "../../types/car-body-types";
 
 export const CardFilterBodyType = () => {
-  const { bodyType, setBodyType } = useFilter();
   const { data } = useCars();
+  const { bodyType, setBodyType } = useFilter();
 
   const getCountForBodyType = (bodyType: string) => {
     return data?.filter((car) => car.bodyType === bodyType).length;

@@ -10,10 +10,10 @@ import { useCars } from "../../hooks/useCars";
 
 interface CarouselProps {
   children: ReactNode;
+  totalCars: number;
 }
 
-export const CardCarousel = ({ children }: CarouselProps) => {
-  const { data } = useCars();
+export const CardCarousel = ({ children, totalCars }: CarouselProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [selected, setSelected] = useState<Number>(0);
   const [cardWidth, setCardWidth] = useState(0);
@@ -49,18 +49,20 @@ export const CardCarousel = ({ children }: CarouselProps) => {
 
   return (
     <>
+    {/* carousel */}
       <div className={styles.cardsWrapper} id="card-list" ref={carouselRef}>
         {children}
       </div>
 
+    {/* carousel controls */}
       <div className={styles.carouselControls}>
         <Image src={ArrowLeft} onClick={() => scrollCarousel("left")} />
         <Image src={ArrowRight} onClick={() => scrollCarousel("right")} />
       </div>
       
-      <div className={styles.btnWrapper}>
-        {data !== undefined && (
-          Array.from({ length: data.length }).map((element, i) => (
+      <div className={styles.CarouselBtnNavigate}>
+        {totalCars && (
+          Array.from({ length: totalCars }).map((element, i) => (
             <button
               className={i === selected ? styles.btnSelected : styles.btn}
               key={i}

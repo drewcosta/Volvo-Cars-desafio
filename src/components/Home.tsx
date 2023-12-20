@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "vcc-ui";
+import { Loading } from "./Common/Loading";
 import styles from "../../public/css/home.module.css";
 
 import { getCarBodyType } from "../utils/filters";
@@ -10,11 +11,10 @@ import { CardFilterBodyType } from "./Card"
 import { CardList } from "./Card";
 import { CardCarousel } from "./Card";
 
-import { Loading } from "./Common/Loading";
 
 export const Home: React.FC = () => {
-  const { bodyType } = useFilter();
   const { data, isLoading } = useCars();
+  const { bodyType } = useFilter();
 
   const filterCarsByBodyType = (bodyType: string) => {
     if (!data) return [];
@@ -36,7 +36,7 @@ export const Home: React.FC = () => {
 
         <CardFilterBodyType />
 
-        <CardCarousel>
+        <CardCarousel totalCars={filteredCars.length}>
           <CardList cars={filteredCars} />
         </CardCarousel>
 
