@@ -6,8 +6,13 @@
   border: none!important;
 }
 
-@media (max-width: 1441px) {
-  .tab{
-    /* display: none; */
+.tab nav div[role="tablist"]{
+  padding: 10px;
+}
+
+@media (max-width: 426px) {
+  .tab div[role="tablist"] > button{
+    margin-right: 10px;
+    padding: 16px 0;
   }
 }
