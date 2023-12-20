@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import { Car } from "../types/car";
+import { useFilter } from "./useFilter";
 
 const fetcher = async () => {
   const response = await axios.get('/api/cars');
@@ -9,9 +10,8 @@ const fetcher = async () => {
 
 
 export function useCars(){
-  const { data, isLoading } = useQuery<Car[]>(['cars'], fetcher)
-
-  console.log(data)
+  const { bodyType } = useFilter();
+  const { data, isLoading } = useQuery<Car[]>(['cars', bodyType], fetcher);
 
   return{
     data,
