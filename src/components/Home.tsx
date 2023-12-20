@@ -10,9 +10,11 @@ import { CardFilterBodyType } from "./Card"
 import { CardList } from "./Card";
 import { CardCarousel } from "./Card";
 
+import { Loading } from "./Common/Loading";
+
 export const Home: React.FC = () => {
   const { bodyType } = useFilter();
-  const { data } = useCars();
+  const { data, isLoading } = useCars();
 
   const filterCarsByBodyType = (bodyType: string) => {
     if (!data) return [];
@@ -21,6 +23,10 @@ export const Home: React.FC = () => {
   };
 
   const filteredCars = filterCarsByBodyType(getCarBodyType(bodyType));
+
+  if (isLoading) {
+    return <Loading />
+  }
 
   return (
     <>
@@ -34,7 +40,7 @@ export const Home: React.FC = () => {
           <CardList cars={filteredCars} />
         </CardCarousel>
 
-      </div>
+      </div >
     </>
   );
 };
