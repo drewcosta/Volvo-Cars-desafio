@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import { Car } from '../types/car';
 
 const fetcher = async (carId: string) => {
-  const response = await axios.get(`/api/cars/`);
+  const response = await axios.get(process.env.NEXT_PUBLIC_API_URL + `/api/cars/`);
   const car = response.data.find((car: Car) => car.id === carId);
   return car;
 };

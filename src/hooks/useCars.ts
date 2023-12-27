@@ -4,7 +4,7 @@ import { Car } from "../types/car";
 import { useFilter } from "./useFilter";
 
 const fetcher = async () => {
-  const response = await axios.get('/api/cars');
+  const response = await axios.get(process.env.NEXT_PUBLIC_API_URL + '/api/cars');
   return response.data;
 };
 
