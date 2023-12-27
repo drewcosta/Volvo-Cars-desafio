@@ -6,8 +6,6 @@ import ArrowRight from "../../../docs/chevron-circled.svg";
 import ArrowLeft from "../../../docs/chevron-circled copy.svg";
 import styles from "../../../public/css/components/Card-carousel.module.css";
 
-import { useCars } from "../../hooks/useCars";
-
 interface CarouselProps {
   children: ReactNode;
   totalCars: number;

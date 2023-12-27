@@ -1,11 +1,11 @@
 import React from "react";
 import "../public/css/styles.css";
-import { Home } from "../src/components/Home";
 import { StyleProvider, ThemePicker } from "vcc-ui";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { FilterContextProvider } from "../src/contexts/FilterContext";
+import type { AppProps } from 'next/app'
 
-function HomePage() {
+function HomePage({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
 
   return (
@@ -14,7 +14,7 @@ function HomePage() {
         <FilterContextProvider>
           <StyleProvider>
             <ThemePicker variant="light">
-              <Home />
+              <Component {...pageProps} />
             </ThemePicker>
           </StyleProvider>
         </FilterContextProvider>

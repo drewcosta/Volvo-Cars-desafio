@@ -34,10 +34,10 @@ export const CardCar = ({ car }: CardPops) => {
           flexDirection: "row",
           gap: 15,
         }}>
-          <Link href="" arrow="right">
+          <Link href={`/car/${car.id}/learn`} arrow="right">
             Conheça
           </Link>
-          <Link href="" arrow="right">
+          <Link href={`/car/${car.id}/shop`} arrow="right">
             Comprar
           </Link>
         </Flex>
