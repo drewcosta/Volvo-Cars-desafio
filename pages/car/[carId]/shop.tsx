@@ -39,14 +39,16 @@ const Shop = () => {
           justifyContent: 'space-between',
           padding: '0 24px',
         }}>
-          <Image src={data?.imageUrl ?? ''} alt={data?.modelName} height={250} width={350} />
+          <div>
+            <Image src={data?.imageUrl ?? ''} alt={data?.modelName} height={350} width={450} />
+          </div>
 
           <div className={styles.pageShop_content_text}>
             <Text variant={"ootah"} subStyle={"emphasis"} as={"h2"}>Personalize o seu carro. Configure e compare para encontrar o seu Volvo ideal</Text>
             <Spacer />
             <Text variant={"bates"} subStyle={"standard"} as={"p"}>- Escolha os acessórios certos para você<br /> - Obtenha um preço hoje</Text>
             <Spacer size={{ default: 8 }} />
-            <View maxWidth={"280"}>
+            <View maxWidth={"200"}>
               <Button variant="outline">Configure o seu</Button>
             </View>
           </div>
