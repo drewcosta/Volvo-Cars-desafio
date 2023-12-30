@@ -4,7 +4,7 @@ import { useCar } from '../../../src/hooks/useCar';
 
 import Image from 'next/image';
 import { Spacer, Text, Flex, Button, View } from "vcc-ui";
-import styles from '../../../public/css/pages/pageShop.module.css'
+import styles from '../../../public/css/pages/page.module.css'
 
 import { Loading } from '../../../src/components/Common/Loading';
 
@@ -19,7 +19,7 @@ const Shop = () => {
   return (
     <div className={styles.container}>
 
-      <div className={styles.pageShop_header}>
+      <div className={styles.page_header}>
         <Flex extend={{
           flexDirection: 'row',
           justifyContent: 'space-between',
@@ -33,7 +33,7 @@ const Shop = () => {
       </div>
 
 
-      <div className={styles.pageShop_content}>
+      <div className={styles.page_content}>
         <Flex extend={{
           flexDirection: 'row',
           justifyContent: 'space-between',
@@ -43,10 +43,10 @@ const Shop = () => {
             <Image src={data?.imageUrl ?? ''} alt={data?.modelName} height={350} width={450} />
           </div>
 
-          <div className={styles.pageShop_content_text}>
+          <div className={styles.page_content_text}>
             <Text variant={"ootah"} subStyle={"emphasis"} as={"h2"}>Personalize o seu carro. Configure e compare para encontrar o seu Volvo ideal</Text>
             <Spacer />
-            <Text variant={"bates"} subStyle={"standard"} as={"p"}>- Escolha os acessórios certos para você<br /> - Obtenha um preço hoje</Text>
+            <Text variant={"kelly"} subStyle={"standard"} as={"p"}>- Escolha os acessórios certos para você<br /> - Obtenha um preço hoje</Text>
             <Spacer size={{ default: 8 }} />
             <View maxWidth={"200"}>
               <Button variant="outline">Configure o seu</Button>
