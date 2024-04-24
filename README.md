@@ -1,5 +1,4 @@
 # Volvo Cars Frontend Challenge
-Desafio para Frontend Pleno. 
 
 O desafio baseia-se na construção de uma aplicação web no qual deveria criar rotas com API Routes de Next e gerar links para as páginas de aprendizado e compra de cada carro concatenando o ID do carro com os URLs de aprendizado (/aprender/) e de compra (/shop/). Ou seja, buscar os dados e renderizá-los no navegador.
 Para a construção da interface, exerci as minhas habilidades na transformação de design em código funcional, através da percepção a partir de imagens disponibilizadas e do site oficial.
